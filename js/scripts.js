@@ -21,10 +21,26 @@ $(document).ready(function() {
 
     // var amount = new BankAccount(name, balance)
 
-
-
     $(".display").text(inputtedFirstDeposit);
+    $("#first-well").show();
   });
+
+    $("#formTwo").submit(function() {
+      event.preventDefault();
+      var inputtedDeposit = parseInt($("input#deposit").val());
+      $(".display-deposit").text(inputtedDeposit);
+      $("#deposit-well").show();
+
+    });
+
+    $("#formThree").submit(function() {
+      event.preventDefault();
+      var inputtedWithdrawal = parseInt($("input#withdrawal").val());
+      $(".display-withdrawal").text(inputtedWithdrawal);
+      $("#withdrawal-well").show();
+
+    });
+
 
 
   // $("#deposit").click(function() {
